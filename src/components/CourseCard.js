@@ -4,6 +4,7 @@ import { Chip, Typography, Button, CardContent, CardActions, Card, Grid } from '
 import CheckCircleRoundedIcon from '@material-ui/icons/CheckCircleRounded';
 import CancelRoundedIcon from '@material-ui/icons/CancelRounded';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
+import AssignmentIndOutlinedIcon from '@material-ui/icons/AssignmentIndOutlined';
 
 const useStyles = makeStyles({
 	root: {
@@ -34,7 +35,7 @@ const CourseCard = props => {
 				<Typography variant="body1" component="h2" gutterBottom>
 					{props.course.title}
         </Typography>
-				<Grid container alignItems="center" spacing={1}>
+				<Grid container alignItems="center" spacing={1} style={{color:"grey"}}>
 					<Grid item container spacing={1}>
 						<Grid item>
 							{
@@ -55,6 +56,12 @@ const CourseCard = props => {
 						</Grid>
 						<Grid item>
 							TuTh 12:20 - 13:50
+						</Grid>
+						<Grid item>
+							<AssignmentIndOutlinedIcon fontSize="small" />
+						</Grid>
+						<Grid item>
+							{props.course.instructor}
 						</Grid>
 					</Grid>
 				</Grid>
