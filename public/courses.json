@@ -1,0 +1,38 @@
+{
+    "EECS330":{
+        "courseNumber": "EECS330",
+        "title": "Human Computer Interaction",
+        "prerequisite": true,
+        "inDegree": false,
+        "weekday": ["tu", "th"],
+        "startTime": "12:20",
+        "endTime": "13:50"
+    },
+    "EECS340":{
+        "courseNumber": "EECS340",
+        "title": "Computer Networking",
+        "prerequisite": true,
+        "inDegree": true,
+        "weekday": ["tu", "th"],
+        "startTime": "11:00",
+        "endTime": "12:20"
+    },
+    "EECS336":{
+        "courseNumber": "EECS336",
+        "title": "Algorithm",
+        "prerequisite": false,
+        "inDegree": true,
+        "weekday": ["we", "mo"],
+        "startTime": "11:00",
+        "endTime": "12:20"
+    },
+    "EECS394":{
+        "courseNumber": "EECS394",
+        "title": "Agile",
+        "prerequisite": true,
+        "inDegree": true,
+        "weekday": ["we", "mo"],
+        "startTime": "11:00",
+        "endTime": "12:20"
+    }
+}
