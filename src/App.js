@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react';
 import './App.css';
+import TopAppBar from './components/TopAppBar';
+import { Container, Grid } from '@material-ui/core';
+import CourseList from './components/CourseList';
 
 function App() {
+  const [courseList, setCourseList] = useState({})
+
+  useEffect(() => {
+    const fetchCourses = async () => {
+      const response = await fetch("./courses.json");
+      const json = await response.json();
+      setCourseList(json);
+    };
+    fetchCourses();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container disableGutters>
+      <TopAppBar />
+      <Grid className="content" container justify="center">
+        <Grid item container md={6} xs={12}>
+          <CourseList courseList={courseList}/>
+        </Grid>
+        <Grid item md={6} xs={12}>
+         
+        </Grid>
+      </Grid>
+    </Container>
   );
 }
 
