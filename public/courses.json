@@ -2,6 +2,7 @@
     "EECS330":{
         "courseNumber": "EECS330",
         "title": "Human Computer Interaction",
+        "instructor": "David",
         "prerequisite": true,
         "inDegree": false,
         "weekday": ["tu", "th"],
@@ -11,6 +12,7 @@
     "EECS340":{
         "courseNumber": "EECS340",
         "title": "Computer Networking",
+        "instructor": "Alice",
         "prerequisite": true,
         "inDegree": true,
         "weekday": ["tu", "th"],
@@ -20,6 +22,7 @@
     "EECS336":{
         "courseNumber": "EECS336",
         "title": "Algorithm",
+        "instructor": "Bob",
         "prerequisite": false,
         "inDegree": true,
         "weekday": ["we", "mo"],
@@ -29,6 +32,7 @@
     "EECS394":{
         "courseNumber": "EECS394",
         "title": "Agile",
+        "instructor": "Tom",
         "prerequisite": true,
         "inDegree": true,
         "weekday": ["we", "mo"],

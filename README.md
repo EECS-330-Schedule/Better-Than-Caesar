@@ -1,5 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Note: before beginning, make sure that Node.js is installed :https://nodejs.org/en/
 ## Available Scripts
 
 In the project directory, you can run:
