@@ -46,7 +46,7 @@ const FilterMenu = props => {
 			{
 				props.prerequisite ? <Chip
 					label="Prerequisite fulfilled"
-					onDelete={() => { props.setPrerequisite(!props.inDegree) }}
+					onDelete={() => { props.setPrerequisite(!props.setPrerequisite) }}
 					color="primary"
 					variant="outlined"
 				/> : null

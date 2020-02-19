@@ -23,6 +23,12 @@ const useStyles = makeStyles({
 	},
 });
 
+const weekDay = course =>{
+	let res = ""
+	course.weekday.map(weekDay => {res+=weekDay})
+	return res
+}
+
 const CourseCard = props => {
 	const classes = useStyles();
 
@@ -31,22 +37,22 @@ const CourseCard = props => {
 			<CardContent>
 				<Typography variant="h6">
 					{props.course.courseNumber}
-        </Typography>
+				</Typography>
 				<Typography variant="body1" component="h2" gutterBottom>
 					{props.course.title}
-        </Typography>
-				<Grid container alignItems="center" spacing={1} style={{color:"grey"}}>
+				</Typography>
+				<Grid container alignItems="center" spacing={1} style={{ color: "grey" }}>
 					<Grid item container spacing={1}>
 						<Grid item>
 							{
 								props.course.prerequisite ? <Chip variant="outlined" label="Prerequisite" color="primary" size="small" icon={<CheckCircleRoundedIcon />} />
-								: <Chip variant="outlined" label="Prerequisite" color="secondary" size="small" icon={<CancelRoundedIcon />} />
+									: <Chip variant="outlined" label="Prerequisite" color="secondary" size="small" icon={<CancelRoundedIcon />} />
 							}
 						</Grid>
 						<Grid item>
 							{
 								props.course.inDegree ? <Chip variant="outlined" label="Degree Requirement" color="primary" size="small" icon={<CheckCircleRoundedIcon />} />
-								: <Chip variant="outlined" label="Degree Requirement" size="small" icon={<CancelRoundedIcon />} />
+									: <Chip variant="outlined" label="Degree Requirement" size="small" icon={<CancelRoundedIcon />} />
 							}
 						</Grid>
 					</Grid>
@@ -55,7 +61,7 @@ const CourseCard = props => {
 							<AccessTimeIcon fontSize="small" />
 						</Grid>
 						<Grid item>
-							TuTh 12:20 - 13:50
+							{weekDay(props.course)} {props.course.startTime} - {props.course.endTime}
 						</Grid>
 						<Grid item>
 							<AssignmentIndOutlinedIcon fontSize="small" />
@@ -67,8 +73,8 @@ const CourseCard = props => {
 				</Grid>
 			</CardContent>
 			<CardActions>
-				<Grid container justify="flex-end" style={{width:"100%"}}>
-					<Grid item style={{width:'auto'}}>
+				<Grid container justify="flex-end" style={{ width: "100%" }}>
+					<Grid item style={{ width: 'auto' }}>
 						<Button size="small" color='primary'>Enroll</Button>
 						<Button size="small">Learn More</Button>
 					</Grid>
