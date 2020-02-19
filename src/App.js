@@ -3,6 +3,7 @@ import './App.css';
 import TopAppBar from './components/TopAppBar';
 import { Container, Grid } from '@material-ui/core';
 import CourseList from './components/CourseList';
+import Calendar from './components/Calendar';
 
 function App() {
   const [courseList, setCourseList] = useState({})
@@ -20,11 +21,11 @@ function App() {
     <Container disableGutters>
       <TopAppBar />
       <Grid className="content" container justify="center">
-        <Grid item container md={6} xs={12}>
-          <CourseList courseList={courseList}/>
+        <Grid item container md={8} xs={12}>
+          <Calendar />
         </Grid>
-        <Grid item md={6} xs={12}>
-         
+        <Grid item md={4} xs={6}>
+         <CourseList courseList={courseList}/>
         </Grid>
       </Grid>
     </Container>
