@@ -22,7 +22,6 @@ function App() {
       <TopAppBar />
       <Grid className="content" container justify="center">
         <Grid item container md={8} xs={12}>
-          <Calendar />
         </Grid>
         <Grid item md={4} xs={6}>
          <CourseList courseList={courseList}/>
