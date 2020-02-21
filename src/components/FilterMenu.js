@@ -26,6 +26,14 @@ const FilterMenu = props => {
 		props.setWeekday(event.target.value)
 	}
 
+	const handleStartTime = event => {
+		props.setStartTime(event.target.value)
+	}
+
+	const handleEndTime = event => {
+		props.setEndTime(event.target.value)
+	}
+
 	const handleClose = () => {
 		setAnchorEl(null);
 	};
@@ -51,6 +59,25 @@ const FilterMenu = props => {
 					variant="outlined"
 				/> : null
 			}
+			{
+				props.startTime && props.endTime ? <Chip
+					label={`${props.startTime} - ${props.endTime}`}
+					onDelete={() => { 
+						props.setStartTime(null)
+						props.setEndTime(null) 
+					}}
+					color="primary"
+					variant="outlined"
+				/> : null
+			}
+			{
+				props.weekday ? <Chip
+					label={props.weekday.toUpperCase()}
+					onDelete={() => { props.setWeekday(null) }}
+					color="primary"
+					variant="outlined"
+				/> : null
+			}
 			<Menu
 				id="simple-menu"
 				anchorEl={anchorEl}
@@ -69,6 +96,7 @@ const FilterMenu = props => {
 										InputLabelProps={{
 											shrink: true,
 										}}
+										onChange={handleStartTime}
 									/>
 								</Grid>
 								<Grid item>
@@ -76,6 +104,7 @@ const FilterMenu = props => {
 										InputLabelProps={{
 											shrink: true,
 										}}
+										onChange={handleEndTime}
 									/>
 								</Grid>
 							</Grid>
@@ -87,10 +116,10 @@ const FilterMenu = props => {
 							<RadioGroup aria-label="Weekday" name="Weekday" value={props.weekday} onChange={handleWeekday}>
 								<Grid container spacing={2}>
 									<Grid item xs={6}>
-										<FormControlLabel value="MoWeFr" control={<Radio />} label="MoWeFr" />
+										<FormControlLabel value="mowefr" control={<Radio />} label="MoWeFr" />
 									</Grid>
 									<Grid item xs={6}>
-										<FormControlLabel value="TuTh" control={<Radio />} label="TuTh" />
+										<FormControlLabel value="tuth" control={<Radio />} label="TuTh" />
 									</Grid>
 								</Grid>
 							</RadioGroup>
