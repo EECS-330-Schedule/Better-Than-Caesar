@@ -5,7 +5,7 @@
         "instructor": "David",
         "prerequisite": true,
         "inDegree": false,
-        "weekday": ["tu", "th"],
+        "weekday": "mowefr",
         "startTime": "12:20",
         "endTime": "13:50"
     },
@@ -15,7 +15,7 @@
         "instructor": "Alice",
         "prerequisite": true,
         "inDegree": true,
-        "weekday": ["tu", "th"],
+        "weekday": "mowefr",
         "startTime": "11:00",
         "endTime": "12:20"
     },
@@ -25,7 +25,7 @@
         "instructor": "Bob",
         "prerequisite": false,
         "inDegree": true,
-        "weekday": ["mo", "we"],
+        "weekday": "tuth",
         "startTime": "11:00",
         "endTime": "12:20"
     },
@@ -35,7 +35,7 @@
         "instructor": "Tom",
         "prerequisite": true,
         "inDegree": true,
-        "weekday": ["mo", "we"],
+        "weekday": "tuth",
         "startTime": "11:00",
         "endTime": "12:20"
     },
@@ -45,7 +45,7 @@
         "instructor": "Paul",
         "prerequisite": true,
         "inDegree": true,
-        "weekday": ["tu", "th"],
+        "weekday": "tuth",
         "startTime": "2:00",
         "endTime": "2:50"
     },
@@ -55,7 +55,7 @@
         "instructor": "Dave",
         "prerequisite": true,
         "inDegree": true,
-        "weekday": ["mo", "we", "fr"],
+        "weekday": "mowefr",
         "startTime": "5:00",
         "endTime": "6:20"
     },
@@ -65,7 +65,7 @@
         "instructor": "Matthew",
         "prerequisite": false,
         "inDegree": false,
-        "weekday": ["tu", "th"],
+        "weekday": "tuth",
         "startTime": "1:00",
         "endTime": "2:20"
     },
@@ -75,9 +75,8 @@
         "instructor": "Jill",
         "prerequisite": true,
         "inDegree": false,
-        "weekday": ["mo", "we", "fr"],
+        "weekday": "mowefr",
         "startTime": "11:00",
         "endTime": "11:50"
-    },
-
+    }
 }
