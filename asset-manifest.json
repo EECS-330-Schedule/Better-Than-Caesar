@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/better-than-caesar/static/css/main.d1b05096.chunk.css",
+    "main.js": "/better-than-caesar/static/js/main.3ebc0a3a.chunk.js",
+    "main.js.map": "/better-than-caesar/static/js/main.3ebc0a3a.chunk.js.map",
+    "runtime-main.js": "/better-than-caesar/static/js/runtime-main.2de3c0b3.js",
+    "runtime-main.js.map": "/better-than-caesar/static/js/runtime-main.2de3c0b3.js.map",
+    "static/js/2.34e5e1d9.chunk.js": "/better-than-caesar/static/js/2.34e5e1d9.chunk.js",
+    "static/js/2.34e5e1d9.chunk.js.map": "/better-than-caesar/static/js/2.34e5e1d9.chunk.js.map",
+    "index.html": "/better-than-caesar/index.html",
+    "precache-manifest.4db861255912f32ea4d8a05db0c85d8e.js": "/better-than-caesar/precache-manifest.4db861255912f32ea4d8a05db0c85d8e.js",
+    "service-worker.js": "/better-than-caesar/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/better-than-caesar/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.34e5e1d9.chunk.js.LICENSE.txt": "/better-than-caesar/static/js/2.34e5e1d9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2de3c0b3.js",
+    "static/js/2.34e5e1d9.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.3ebc0a3a.chunk.js"
+  ]
+}
