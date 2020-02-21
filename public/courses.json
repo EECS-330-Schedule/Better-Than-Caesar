@@ -78,6 +78,6 @@
         "weekday": ["mo", "we", "fr"],
         "startTime": "11:00",
         "endTime": "11:50"
-    },
+    }
 
 }
