@@ -5,15 +5,11 @@ import CheckCircleRoundedIcon from '@material-ui/icons/CheckCircleRounded';
 import CancelRoundedIcon from '@material-ui/icons/CancelRounded';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import AssignmentIndOutlinedIcon from '@material-ui/icons/AssignmentIndOutlined';
+import CheckIcon from '@material-ui/icons/Check';
 
 const useStyles = makeStyles({
 	root: {
 		width: "100%",
-	},
-	bullet: {
-		display: 'inline-block',
-		margin: '0 2px',
-		transform: 'scale(0.8)',
 	},
 	title: {
 		fontSize: 14,
@@ -21,16 +17,14 @@ const useStyles = makeStyles({
 	pos: {
 		marginBottom: 12,
 	},
+	enroll:{
+		color: "green"
+	}
 });
-
-const weekDay = course =>{
-	let res = ""
-	course.weekday.map(weekDay => {res+=weekDay})
-	return res
-}
 
 const CourseCard = props => {
 	const classes = useStyles();
+	const [enroll, setEnroll] = React.useState(false)
 
 	return (
 		<Card className={classes.root}>
@@ -61,7 +55,7 @@ const CourseCard = props => {
 							<AccessTimeIcon fontSize="small" />
 						</Grid>
 						<Grid item>
-							{weekDay(props.course)} {props.course.startTime} - {props.course.endTime}
+							{props.course.weekday.toUpperCase()} {props.course.startTime} - {props.course.endTime}
 						</Grid>
 						<Grid item>
 							<AssignmentIndOutlinedIcon fontSize="small" />
@@ -75,7 +69,15 @@ const CourseCard = props => {
 			<CardActions>
 				<Grid container justify="flex-end" style={{ width: "100%" }}>
 					<Grid item style={{ width: 'auto' }}>
-						<Button size="small" color='primary'>Enroll</Button>
+						<Button
+							className={enroll?classes.enroll:classes.enrolled}
+							startIcon={enroll?<CheckIcon />: null} 
+							size="small" color='primary' 
+							onClick={()=>{setEnroll(true)}}
+							disabled={enroll}
+						>
+							{enroll?"Enrolled":"Enroll"}
+						</Button>
 						<Button size="small">Learn More</Button>
 					</Grid>
 				</Grid>
