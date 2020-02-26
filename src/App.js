@@ -21,11 +21,11 @@ function App() {
     <Container disableGutters>
       <TopAppBar />
       <Grid className="content" container justify="center">
-        <Grid item container md={8} xs={12}>
-          <Calendar />
-        </Grid>
-        <Grid item md={4} xs={6}>
+        <Grid item md={6} xs={12}>
          <CourseList courseList={courseList}/>
+        </Grid>
+        <Grid item container md={6} xs={0}>
+          <Calendar />
         </Grid>
       </Grid>
     </Container>
