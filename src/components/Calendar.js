@@ -33,7 +33,7 @@ export default class Calendar extends React.Component {
     }
 
     return (<div class="calendar">
-      <div class="body">
+      <div class="c_body">
         <div class="lightgrey body-list">
           <ul class="week_header">
             <li> </li>
@@ -49,16 +49,6 @@ export default class Calendar extends React.Component {
         </div>
       </div>
     </div>)
+
   }
 }
-
-
-
-
-
-
-
-
-
-
-
