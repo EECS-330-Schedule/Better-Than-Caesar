@@ -1,9 +1,4 @@
 import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import CourseCard from './CourseCard';
-import SearchBox from './SearchBox';
 
 export default class Calendar extends React.Component {
   constructor(props) {
@@ -33,7 +28,7 @@ export default class Calendar extends React.Component {
     }
 
     return (<div class="calendar">
-      <div class="body">
+      <div class="c_body">
         <div class="lightgrey body-list">
           <ul class="week_header">
             <li> </li>
@@ -49,16 +44,6 @@ export default class Calendar extends React.Component {
         </div>
       </div>
     </div>)
+
   }
 }
-
-
-
-
-
-
-
-
-
-
-

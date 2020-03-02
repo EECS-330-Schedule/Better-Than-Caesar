@@ -97,7 +97,10 @@ const CourseList = props => {
 					props.courseList ?
 						filterList(props.courseList) ?
 							filterList(props.courseList).filter(checkCourse).map(
-								course => <ListItem key={course.courseNumber}><CourseCard course={course} /></ListItem>
+								course => 
+								<ListItem key={course.courseNumber}>
+									<CourseCard course={course} detailPortal={props.detailPortal} open={props.open} setOpen={props.setOpen}/>
+								</ListItem>
 							) : <Typography align="center" style={{ color: "grey" }}>No result for "{searchContent}"</Typography>
 						: null
 				}

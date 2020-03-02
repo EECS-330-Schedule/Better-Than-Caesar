@@ -1,11 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Chip, Typography, Button, CardContent, CardActions, Card, Grid } from '@material-ui/core'
+import { Chip, Typography, Button, CardContent, CardActions, Card, Grid, Portal } from '@material-ui/core'
 import CheckCircleRoundedIcon from '@material-ui/icons/CheckCircleRounded';
 import CancelRoundedIcon from '@material-ui/icons/CancelRounded';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import AssignmentIndOutlinedIcon from '@material-ui/icons/AssignmentIndOutlined';
 import CheckIcon from '@material-ui/icons/Check';
+import CourseDetail from './CourseDetail';
 
 const useStyles = makeStyles({
 	root: {
@@ -17,14 +18,19 @@ const useStyles = makeStyles({
 	pos: {
 		marginBottom: 12,
 	},
-	enroll:{
+	enroll: {
 		color: "green"
 	}
 });
 
+
 const CourseCard = props => {
 	const classes = useStyles();
 	const [enroll, setEnroll] = React.useState(false)
+
+	const handleClick = () => {
+		props.setOpen(props.course.courseNumber)
+	}
 
 	return (
 		<Card className={classes.root}>
@@ -70,18 +76,23 @@ const CourseCard = props => {
 				<Grid container justify="flex-end" style={{ width: "100%" }}>
 					<Grid item style={{ width: 'auto' }}>
 						<Button
-							className={enroll?classes.enroll:classes.enrolled}
-							startIcon={enroll?<CheckIcon />: null} 
-							size="small" color='primary' 
-							onClick={()=>{setEnroll(true)}}
+							className={enroll ? classes.enroll : classes.enrolled}
+							startIcon={enroll ? <CheckIcon /> : null}
+							size="small" color='primary'
+							onClick={() => { setEnroll(true) }}
 							disabled={enroll}
 						>
-							{enroll?"Enrolled":"Enroll"}
+							{enroll ? "Enrolled" : "Enroll"}
 						</Button>
-						<Button size="small">Learn More</Button>
+						<Button size="small" onClick={handleClick}>Learn More</Button>
 					</Grid>
 				</Grid>
 			</CardActions>
+			<Portal container={props.detailPortal.current}>
+				{
+					props.open == props.course.courseNumber? <CourseDetail setOpen={props.setOpen} course={props.course}></CourseDetail> : null
+				}
+			</Portal>
 		</Card>
 	);
 }

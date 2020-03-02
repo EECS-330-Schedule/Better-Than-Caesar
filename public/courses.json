@@ -1,5 +1,5 @@
 {
-    "CS330":{
+    "CS330": {
         "courseNumber": "CS330",
         "title": "Human Computer Interaction",
         "instructor": "David",
@@ -7,9 +7,39 @@
         "inDegree": false,
         "weekday": "mowefr",
         "startTime": "12:20",
-        "endTime": "13:50"
+        "endTime": "13:50",
+        "description": "This course teaches you how to do UI design",
+        "location": "Harris Hall 201",
+        "info": {
+            "2019": {
+                "fall": {
+                    "satisfaction": 90,
+                    "avgtime": {
+                        "0-5": 12,
+                        "5-10": 23,
+                        "10-15": 10
+                    },
+                    "comment": {
+                        "David": "This is a ok course",
+                        "Lili": "very good course"
+                    }
+                },
+                "winter": {
+                    "satisfaction": 90,
+                    "avgtime": {
+                        "0-5": 12,
+                        "5-10": 23,
+                        "10-15": 10
+                    },
+                    "comment": {
+                        "Alfred": "This is a ok course",
+                        "Tomas": "very good course"
+                    }
+                }
+            }
+        }
     },
-    "CS340":{
+    "CS340": {
         "courseNumber": "CS340",
         "title": "Computer Networking",
         "instructor": "Alice",
@@ -19,7 +49,7 @@
         "startTime": "11:00",
         "endTime": "12:20"
     },
-    "CS336":{
+    "CS336": {
         "courseNumber": "CS336",
         "title": "Algorithm",
         "instructor": "Bob",
@@ -29,7 +59,7 @@
         "startTime": "11:00",
         "endTime": "12:20"
     },
-    "CS394":{
+    "CS394": {
         "courseNumber": "CS394",
         "title": "Agile",
         "instructor": "Tom",
@@ -39,7 +69,7 @@
         "startTime": "11:00",
         "endTime": "12:20"
     },
-    "CS321":{
+    "CS321": {
         "courseNumber": "CS321",
         "title": "Programming Languages",
         "instructor": "Paul",
@@ -49,7 +79,7 @@
         "startTime": "2:00",
         "endTime": "2:50"
     },
-    "CS322":{
+    "CS322": {
         "courseNumber": "CS322",
         "title": "Compiler Construction",
         "instructor": "Dave",
@@ -59,7 +89,7 @@
         "startTime": "5:00",
         "endTime": "6:20"
     },
-    "IEMS303":{
+    "IEMS303": {
         "courseNumber": "IEMS303",
         "title": "Statistics",
         "instructor": "Matthew",
@@ -69,7 +99,7 @@
         "startTime": "1:00",
         "endTime": "2:20"
     },
-    "IEMS202":{
+    "IEMS202": {
         "courseNumber": "IEMS202",
         "title": "Probability",
         "instructor": "Jill",
