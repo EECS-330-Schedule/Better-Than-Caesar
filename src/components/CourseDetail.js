@@ -6,11 +6,12 @@ import CancelRoundedIcon from '@material-ui/icons/CancelRounded';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import AssignmentIndOutlinedIcon from '@material-ui/icons/AssignmentIndOutlined';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
+import CheckIcon from '@material-ui/icons/Check'
 
 const useStyles = makeStyles({
 	root: {
-		width: "100%",
-		margin: '10px'
+		width: "96%",
+		margin: '2%'
 	},
 	title: {
 		fontSize: 14,
@@ -36,11 +37,15 @@ const CourseDetail = props => {
 		setQuarter(event.target.value);
 	};
 
+	const handleEnroll = () => {
+		props.setEnrolled([...props.enrolled, props.course.courseNumber]);
+	}
+
 	if (props.course) {
 		return (
 			<Card className={classes.root}>
 				<CardActions>
-					<Button onClick={() => props.setOpen(null)}>Back</Button>
+					<Button onClick={() => props.setOpen(false)}>Back</Button>
 				</CardActions>
 				<Divider />
 				<CardContent>
@@ -70,19 +75,19 @@ const CourseDetail = props => {
 				<Divider />
 				<CardContent>
 					<Grid container alignItems="center" spacing={1} style={{ color: "grey" }}>
-						<Grid item xs>
+						<Grid item xs={1}>
 							<AccessTimeIcon fontSize="small" />
 						</Grid>
 						<Grid item xs={11}>
 							{props.course.weekday.toUpperCase()} {props.course.startTime} - {props.course.endTime}
 						</Grid>
-						<Grid item xs>
+						<Grid item xs={1}>
 							<AssignmentIndOutlinedIcon fontSize="small" />
 						</Grid>
 						<Grid item xs={11}>
 							{props.course.instructor}
 						</Grid>
-						<Grid item xs>
+						<Grid item xs={1}>
 							<LocationOnIcon fontSize="small" />
 						</Grid>
 						<Grid item xs={11}>
@@ -113,6 +118,15 @@ const CourseDetail = props => {
 				<CardActions>
 					<Grid container justify="flex-end" style={{ width: "100%" }}>
 						<Grid item style={{ width: 'auto' }}>
+							<Button
+								className={props.enrolled.indexOf(props.course.courseNumber) > -1 ? classes.enroll : classes.enrolled}
+								startIcon={props.enrolled.indexOf(props.course.courseNumber) > -1 ? <CheckIcon /> : null}
+								size="small" color='primary'
+								onClick={handleEnroll}
+								disabled={props.enrolled.indexOf(props.course.courseNumber) > -1}
+							>
+								{props.enrolled.indexOf(props.course.courseNumber) > -1 ? "Enrolled" : "Enroll"}
+							</Button>
 							<Button size="small">Learn More</Button>
 						</Grid>
 					</Grid>
@@ -120,6 +134,8 @@ const CourseDetail = props => {
 
 			</Card>
 		)
+	} else {
+		return null
 	}
 }
 

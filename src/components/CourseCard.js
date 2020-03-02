@@ -26,10 +26,14 @@ const useStyles = makeStyles({
 
 const CourseCard = props => {
 	const classes = useStyles();
-	const [enroll, setEnroll] = React.useState(false)
 
 	const handleClick = () => {
-		props.setOpen(props.course.courseNumber)
+		props.setDetailCourse(props.course)
+		props.setOpen(true)
+	}
+
+	const handleEnroll = () => {
+		props.setEnrolled([...props.enrolled, props.course.courseNumber]);
 	}
 
 	return (
@@ -76,23 +80,18 @@ const CourseCard = props => {
 				<Grid container justify="flex-end" style={{ width: "100%" }}>
 					<Grid item style={{ width: 'auto' }}>
 						<Button
-							className={enroll ? classes.enroll : classes.enrolled}
-							startIcon={enroll ? <CheckIcon /> : null}
+							className={props.enrolled.indexOf(props.course.courseNumber) > -1 ? classes.enroll : classes.enrolled}
+							startIcon={props.enrolled.indexOf(props.course.courseNumber) > -1 ? <CheckIcon /> : null}
 							size="small" color='primary'
-							onClick={() => { setEnroll(true) }}
-							disabled={enroll}
+							onClick={handleEnroll}
+							disabled={props.enrolled.indexOf(props.course.courseNumber) > -1}
 						>
-							{enroll ? "Enrolled" : "Enroll"}
+							{props.enrolled.indexOf(props.course.courseNumber) > -1 ? "Enrolled" : "Enroll"}
 						</Button>
 						<Button size="small" onClick={handleClick}>Learn More</Button>
 					</Grid>
 				</Grid>
 			</CardActions>
-			<Portal container={props.detailPortal.current}>
-				{
-					props.open == props.course.courseNumber? <CourseDetail setOpen={props.setOpen} course={props.course}></CourseDetail> : null
-				}
-			</Portal>
 		</Card>
 	);
 }
