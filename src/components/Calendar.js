@@ -1,9 +1,4 @@
-import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import CourseCard from './CourseCard';
-import SearchBox from './SearchBox';
+import React from 'react';
 
 export default class Calendar extends React.Component {
   constructor(props) {
@@ -16,26 +11,26 @@ export default class Calendar extends React.Component {
   render() {
     function Day(props) {
       return (<th>
-        <span class="long">{props.day}</span>
+        <span className="long">{props.day}</span>
       </th>);
     }
 
     function Cell(props) {
-      return <li class="cell" id={props.day + props.hour}></li>;
+      return <li className="cell" id={props.day + props.hour}></li>;
     }
 
     function Hour(props) {
       var weekday = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
       return <ul id={props.hour}>
         <li> {props.hour} </li>
-        {weekday.map((day) => <Cell day={day} hour={props.hour} />)}
+        {weekday.map((day) => <Cell key={props.hour + day} day={day} hour={props.hour} />)}
       </ul>
     }
 
-    return (<div class="calendar">
-      <div class="c_body">
-        <div class="lightgrey body-list">
-          <ul class="week_header">
+    return (<div className="calendar">
+      <div className="c_body">
+        <div className="lightgrey body-list">
+          <ul className="week_header">
             <li> </li>
             <li>MON</li>
             <li>TUE</li>
@@ -44,8 +39,8 @@ export default class Calendar extends React.Component {
             <li>FRI</li>
           </ul>
         </div>
-        <div class="darkgrey body-list">
-          {this.hour.map((hour) => <Hour hour={hour} />)}
+        <div className="darkgrey body-list">
+          {this.hour.map((hour) => <Hour key={hour} hour={hour} />)}
         </div>
       </div>
     </div>)

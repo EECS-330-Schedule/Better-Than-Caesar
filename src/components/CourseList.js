@@ -14,7 +14,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const checkTime = (startTime, endTime, courseStartTime, courseEndTime) => {
-	console.log(startTime,endTime,courseStartTime,courseEndTime)
 	if (Date.parse(`01/01/2011 ${courseEndTime}:00`) < Date.parse(`01/01/2011 ${endTime}:00`)
 		&& Date.parse(`01/01/2011 ${courseStartTime}:00`) > Date.parse(`01/01/2011 ${startTime}:00`)) {
 		return true
@@ -30,7 +29,6 @@ const CourseList = props => {
 	const [weekday, setWeekday] = useState(null)
 	const [prerequisite, setPrerequisite] = useState(false)
 	const [inDegree, setInDegree] = useState(false)
-	const [enrolled, setEnrolled] = useState([])
 	const classes = useStyles();
 
 	const checkCourse = course => {
@@ -97,7 +95,18 @@ const CourseList = props => {
 					props.courseList ?
 						filterList(props.courseList) ?
 							filterList(props.courseList).filter(checkCourse).map(
-								course => <ListItem key={course.courseNumber}><CourseCard course={course} /></ListItem>
+								course => 
+								<ListItem key={course.courseNumber}>
+									<CourseCard 
+										course={course} 
+										open={props.open} 
+										setOpen={props.setOpen} 
+										detailCourse={props.detailCourse} 
+										setDetailCourse={props.setDetailCourse} 
+										enrolled={props.enrolled} 
+										setEnrolled={props.setEnrolled}
+									/>
+								</ListItem>
 							) : <Typography align="center" style={{ color: "grey" }}>No result for "{searchContent}"</Typography>
 						: null
 				}
