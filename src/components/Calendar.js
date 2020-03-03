@@ -5,6 +5,10 @@ import ListItem from '@material-ui/core/ListItem';
 import CourseCard from './CourseCard';
 import SearchBox from './SearchBox';
 
+
+
+
+
 export default class Calendar extends React.Component {
   constructor(props) {
     super(props);
@@ -14,11 +18,6 @@ export default class Calendar extends React.Component {
   }
 
   render() {
-    function Day(props) {
-      return (<th>
-        <span class="long">{props.day}</span>
-      </th>);
-    }
 
     function Cell(props) {
       return <li class="cell" id={props.day + props.hour}></li>;
