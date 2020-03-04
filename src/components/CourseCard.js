@@ -6,7 +6,7 @@ import CancelRoundedIcon from '@material-ui/icons/CancelRounded';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import AssignmentIndOutlinedIcon from '@material-ui/icons/AssignmentIndOutlined';
 import CheckIcon from '@material-ui/icons/Check';
-import CourseDetail from './CourseDetail';
+import { AddEvent } from './Calendar.js'
 
 const useStyles = makeStyles({
 	root: {
@@ -33,6 +33,8 @@ const CourseCard = props => {
 	}
 
 	const handleEnroll = () => {
+		console.log("add event")
+		AddEvent(props.course.title, "Monday", "8:00", 60, 20)
 		props.setEnrolled([...props.enrolled, props.course.courseNumber]);
 	}
 

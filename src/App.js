@@ -56,7 +56,7 @@ function App() {
               }
             </Grid>
             <Grid item container md={6}>
-              <Calendar />
+              <Calendar enrolled={enrolled} courseList={courseList}/>
             </Grid>
           </Grid>
       }
