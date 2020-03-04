@@ -70,7 +70,7 @@ const WeekCalendar=props=> {
   const { data, currentDate } = state;
   console.log(data);
   return (
-      <Paper>
+      <Paper className="calendar">
         <Scheduler
           data={data}
           height={660}
