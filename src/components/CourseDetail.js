@@ -127,7 +127,6 @@ const CourseDetail = props => {
 							>
 								{props.enrolled.indexOf(props.course.courseNumber) > -1 ? "Enrolled" : "Enroll"}
 							</Button>
-							<Button size="small">Learn More</Button>
 						</Grid>
 					</Grid>
 				</CardActions>

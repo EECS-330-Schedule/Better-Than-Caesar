@@ -6,7 +6,6 @@ import CancelRoundedIcon from '@material-ui/icons/CancelRounded';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import AssignmentIndOutlinedIcon from '@material-ui/icons/AssignmentIndOutlined';
 import CheckIcon from '@material-ui/icons/Check';
-import CourseDetail from './CourseDetail';
 
 const useStyles = makeStyles({
 	root: {
