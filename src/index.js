@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import './css/Calendar.css'
 import './css/Event.css'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import AddChosenCourse from './components/Calendar'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

@@ -33,8 +33,6 @@ const CourseCard = props => {
 	}
 
 	const handleEnroll = () => {
-		console.log("add event")
-		AddEvent(props.course.title, "Monday", "8:00", 60, 20)
 		props.setEnrolled([...props.enrolled, props.course.courseNumber]);
 	}
 
