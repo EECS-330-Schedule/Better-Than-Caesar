@@ -2,13 +2,13 @@
     "CS330": {
         "courseNumber": "CS330",
         "title": "Human Computer Interaction",
-        "instructor": "David",
+        "instructor": "Sarah Van Wart",
         "prerequisite": true,
         "inDegree": false,
         "weekday": "mowefr",
         "startTime": "12:20",
         "endTime": "13:50",
-        "description": "This course teaches you how to do UI design",
+        "description": "Introduction to human-computer interaction and the design of systems that work for people and their organizations. The goal is to understand the manner in which humans interact with, and use, their computers for productive work. The course focus is on the interface as designed artifact. The interface is a design problem without a single correct solution but which has many good solutions and a plethora of bad solutions. Class discussion centers on what makes an interface good and proven techniques for designing interfaces that meet human needs.",
         "location": "Harris Hall 201",
         "info": {
             "2019": {
@@ -28,7 +28,7 @@
                     "satisfaction": 90,
                     "avgtime": {
                         "0-5": 12,
-                        "5-10": 23,
+                        "5-10": 1,
                         "10-15": 10
                     },
                     "comment": {
@@ -42,32 +42,110 @@
     "CS340": {
         "courseNumber": "CS340",
         "title": "Computer Networking",
-        "instructor": "Alice",
+        "instructor": "Stephen Tarzia",
         "prerequisite": true,
         "inDegree": true,
         "weekday": "mowefr",
         "startTime": "11:00",
-        "endTime": "12:20"
+        "endTime": "12:20",
+        "description": "A top-down exploration of networking using the 5-layer model and the TCP/IP stack. HTTP, FTP, DNS, BSD Sockets, concurrent servers, checksums, reliable transport with stop-and-wait, go-back-n, selective repeat, flow control, congestion control, TCP, unicast routing, multicast routing, router architecture, IP, IPv6, IP multicast, MAC protocols and LANs, Ethernet , wireless networks, and network security. Over the course of the quarter, students build web clients and servers, a fully compatible TCP/IP stack that can run them, and evaluate routing protocols in simulation.",
+        "location": "Technological Institute M345",
+        "info": {
+            "2019": {
+                "fall": {
+                    "satisfaction": 72,
+                    "avgtime": {
+                        "0-5": 24,
+                        "5-10": 19,
+                        "10-15": 8
+                    },
+                    "comment": {
+                        "Robert": "Very well structured and great to learn",
+                        "Derek": "Lots of work"
+                    }
+                },
+                "winter": {
+                    "satisfaction": 70,
+                    "avgtime": {
+                        "0-5": 9,
+                        "5-10": 23,
+                        "10-15": 16
+                    },
+                    "comment": {
+                        "Katie": "One of the most useful courses for CS majors",
+                        "Moses": "Learned a lot from the projects"
+                    }
+                }
+            }
+        }
     },
     "CS336": {
         "courseNumber": "CS336",
-        "title": "Algorithm",
-        "instructor": "Bob",
+        "title": "Algorithms",
+        "instructor": "Konstantin Makarychev",
         "prerequisite": false,
         "inDegree": true,
         "weekday": "tuth",
         "startTime": "11:00",
-        "endTime": "12:20"
+        "endTime": "12:20",
+        "description": "Algorithm design and analysis is fundamental to all areas of computer science and gives a rigorous framework for the study optimization. This course provides an introduction to algorithm design through a survey of the common algorithm design paradigms of greedy optimization, divide and conquer, dynamic programming, network flows, reductions, and randomized algorithms. Important themes that will be developed in the course include the algorithmic abstraction-design-analysis process and computational tractability (e.g., NP-completeness).",
+        "location": "Technological Institute L361",
+        "info": {
+            "2019": {
+                "fall": {
+                    "satisfaction": 80,
+                    "avgtime": {
+                        "0-5": 7,
+                        "5-10": 10,
+                        "10-15": 18
+                    },
+                    "comment": {
+                        "Jill": "Hard and time-consuming",
+                        "Max": "Didn't like the peer-reviewing for homeworks"
+                    }
+                },
+                "winter": {
+                    "satisfaction": 85,
+                    "avgtime": {
+                        "0-5": 30,
+                        "5-10": 20,
+                        "10-15": 5
+                    },
+                    "comment": {
+                        "Han": "Easy class but didn't learn that much",
+                        "Elizabeth": "Office hours were very helpful"
+                    }
+                }
+            }
+        }
     },
     "CS394": {
         "courseNumber": "CS394",
         "title": "Agile",
-        "instructor": "Tom",
+        "instructor": "Christopher Riesbeck",
         "prerequisite": true,
         "inDegree": true,
         "weekday": "tuth",
         "startTime": "11:00",
-        "endTime": "12:20"
+        "endTime": "12:20",
+        "description": "Developing mobile and web applications, using modern sustainable agile practices, such as backlogs, user stories, velocity charts, and test driven development, to deliver value as quickly as possible to end users, clients, developers, and the development organization.",
+        "location": "Technological Institute M177",
+        "info": {
+            "2019": {
+              "winter": {
+                    "satisfaction": 75,
+                    "avgtime": {
+                        "0-5": 10,
+                        "5-10": 18,
+                        "10-15": 17
+                    },
+                    "comment": {
+                        "Larry": "Very well-taught course",
+                        "Harry": "Useful content"
+                    }
+                }
+            }
+        }
     },
     "CS321": {
         "courseNumber": "CS321",
@@ -76,8 +154,38 @@
         "prerequisite": true,
         "inDegree": true,
         "weekday": "tuth",
-        "startTime": "2:00",
-        "endTime": "2:50"
+        "startTime": "14:00",
+        "endTime": "14:50",
+        "description": "This course introduces students to the key features of programming languages. Students implement a series of interpreters that nail down the precise details of how various aspects of programming languages behave.  Students are assumed to understand trees and (mathematical) functions that process them; the course builds up to the features of real programming languages from there.",
+        "location": "Technological Institute M345",
+        "info": {
+            "2019": {
+                "fall": {
+                    "satisfaction": 90,
+                    "avgtime": {
+                        "0-5": 10,
+                        "5-10": 10,
+                        "10-15": 5
+                    },
+                    "comment": {
+                        "John": "Great professor",
+                        "Jerry": "Course layout was easy to follow and succeed in"
+                    }
+                },
+                "spring": {
+                    "satisfaction": 90,
+                    "avgtime": {
+                        "0-5": 12,
+                        "5-10": 23,
+                        "10-15": 10
+                    },
+                    "comment": {
+                        "William": "Had fun in this course",
+                        "Sally": "Not too time consuming, but still challenging"
+                    }
+                }
+            }
+        }
     },
     "CS322": {
         "courseNumber": "CS322",
@@ -86,27 +194,105 @@
         "prerequisite": true,
         "inDegree": true,
         "weekday": "mowefr",
-        "startTime": "5:00",
-        "endTime": "6:20"
+        "startTime": "17:00",
+        "endTime": "18:20",
+        "description": "The compiler is the programmer's primary tool. Understanding the compiler is therefore critical for programmers, even if they never build one. Furthermore, many design techniques that emerged in the context of compilers are useful for a range of other application areas. This course introduces students to the essential elements of building a compiler: parsing, context-sensitive property checking, code linearization, register allocation, etc. To take this course, students are expected to already understand how programming languages behave, to a fairly detailed degree. The material in the course builds on that knowledge via a series of semantics preserving transformations that start with a fairly high-level programming language and culminate in machine code.",
+        "location": "Annenberg Hall G21",
+        "info": {
+            "2019": {
+                "winter": {
+                    "satisfaction": 68,
+                    "avgtime": {
+                        "0-5": 5,
+                        "5-10": 15,
+                        "10-15": 20
+                    },
+                    "comment": {
+                        "Bill": "Very challenging, had to go to lots of office hours",
+                        "Claire": "Course is fine if you pay attention in lecture and do the homeworks"
+                    }
+                }
+            }
+        }
     },
     "IEMS303": {
         "courseNumber": "IEMS303",
         "title": "Statistics",
-        "instructor": "Matthew",
+        "instructor": "Matthew Plumlee",
         "prerequisite": false,
         "inDegree": false,
         "weekday": "tuth",
-        "startTime": "1:00",
-        "endTime": "2:20"
+        "startTime": "13:00",
+        "endTime": "14:20",
+        "description": "Introduction to the foundations of statistics and statistical computing for data analysis and their applications. Covers descriptive statistics and statistical inference for estimation, testing and prediction.",
+        "location": "Technological Institute L251",
+        "info": {
+            "2019": {
+                "fall": {
+                    "satisfaction": 75,
+                    "avgtime": {
+                        "0-5": 12,
+                        "5-10": 23,
+                        "10-15": 10
+                    },
+                    "comment": {
+                        "Amy": "Learned a lot",
+                        "Ashley": "Time consuming class"
+                    }
+                },
+                "winter": {
+                    "satisfaction": 77,
+                    "avgtime": {
+                        "0-5": 12,
+                        "5-10": 23,
+                        "10-15": 10
+                    },
+                    "comment": {
+                        "Linda": "Had to learn on my own a lot",
+                        "Barry": "Lectures weren't that helpful"
+                    }
+                }
+            }
+        }
     },
     "IEMS202": {
         "courseNumber": "IEMS202",
         "title": "Probability",
-        "instructor": "Jill",
+        "instructor": "Kezban Yagci",
         "prerequisite": true,
         "inDegree": false,
         "weekday": "mowefr",
         "startTime": "11:00",
-        "endTime": "11:50"
+        "endTime": "11:50",
+        "description": "Introduction to probability theory and its applications. Conditional probabilities and expectation values. Random variables and distributions, including binomial, Poisson, exponential, and normal. Joint distributions and limit laws for foundation of and connection to statistics. Examples in reliability, inventory, finance, and statistics.",
+        "location": "Technological Institute M164",
+        "info": {
+            "2019": {
+                "fall": {
+                    "satisfaction": 94,
+                    "avgtime": {
+                        "0-5": 9,
+                        "5-10": 10,
+                        "10-15": 0
+                    },
+                    "comment": {
+                        "Spencer": "Great course, provides a foundation for higher level IE courses",
+                        "Betty": "Easy course, great professor"
+                    }
+                },
+                "winter": {
+                    "satisfaction": 70,
+                    "avgtime": {
+                        "0-5": 10,
+                        "5-10": 15,
+                        "10-15": 5
+                    },
+                    "comment": {
+                        "Isabel": "Picks up a lot in the second half of the quarter",
+                        "Alex": "Professor cares a lot about learning"
+                    }
+                }
+            }
+        }
     }
 }
