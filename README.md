@@ -133,6 +133,18 @@ Our user task include:
 4. Choose 2 courses that you already fulfilled the prerequisite.
     - The filter can filter all the courses that the user already fulfilled the prerequisite, and every course card have a `Prerequisite fulfilled` badge in the course card. The user can easily choose a course the user already fulfilled the prerequisite.
 
+# Reflection
+
+Considering the limit time, we focus on the major functions that users need. As a better class system, we try to include the main information that users require for choosing courses and make the UI more user-friendly. That’s why we start the filter part at first. Based on our user research and design hypothesis, the filter part will satisfy the most users’ requirement for arranging time, meeting the graduation requirement, and getting useful information for preferring courses. By using the filter and searching, users could reach the courses they may be interested in. 
+
+If they would like to know more about one course, naturally, they want to know it in the same page rather than a link to redirect. Therefore, we finish the read more function to feed the users’ requirement. By clicking on the read more to know the course introduction and evaluation.  Meanwhile, we extract the data from CTEC and add the data visualization part for important data like spending time, instead of just giving a boring list of data, making these evaluations more convenient for users to compare in various terms.
+
+We also add the calendar part for users to view their schedule and their current enrolled courses. Compared to other ways like listing the courses, the calendar provides a more straight and clear way to present the time arrangement and enrolled courses, making the whole page easier for viewing and arranging time. 
+Also, considering the wide usage of smart phones and pads, more and more users may try to enroll courses in different devices. The responsive design is necessary in this point and then we add it.
+
+So far, we have the main functions for the course scheduling and enrolling system. In the future, a new feature may be available. We may include the major tree for students in read more function to guide them for future professional track planning and course arrangement.  Last but not least, we should implement and improve the accessibility for the whole page.
+
+
 # Link
 
 [Github Repo](https://github.com/EECS-330-Schedule/Better-Than-Caesar)
