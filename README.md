@@ -135,7 +135,11 @@ Our user task include:
 
 # Link
 
+[Github Repo](https://github.com/EECS-330-Schedule/Better-Than-Caesar)
 
+[Online Demo](https://better-than-caesar.firebaseapp.com/)
+
+Select courses freely, you can click `Learn more` on each courses to view their details
 
 
 
