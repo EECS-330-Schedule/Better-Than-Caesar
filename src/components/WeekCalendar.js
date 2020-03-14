@@ -5,9 +5,10 @@ import {
   Scheduler,
   WeekView,
   Appointments,
-  AllDayPanel,
+  AppointmentTooltip,
 } from '@devexpress/dx-react-scheduler-material-ui';
-
+import { Button, IconButton } from '@material-ui/core';
+import MoreIcon from "@material-ui/icons/More"
 
 function GetWeekDay(str) {
   let res = [];
@@ -37,7 +38,7 @@ function transform(enrolled, courseList) {
       let weekday = GetWeekDay(courseList[i].weekday);
       for (let j of weekday) {
         let course = {};
-        course.title = courseList[i].courseNumber;
+        course.title = courseList[i].courseNumber + " " + courseList[i].title;
         let time = ParseTime(courseList[i].startTime);
         course.startDate = new Date(2020, 2, j, time[0], time[1]);
         time = ParseTime(courseList[i].endTime);
@@ -51,16 +52,35 @@ function transform(enrolled, courseList) {
   }
 }
 
+
 const WeekCalendar = props => {
+
   let state = {
     data: transform(props.enrolled, props.courseList),
-    currentDate: new Date(2020,2,6),
+    currentDate: new Date(2020, 2, 6),
   };
 
   const { data, currentDate } = state;
 
+  const handleDrop = title => {
+    let arr = title.split(" ");
+		let newArr = props.enrolled.filter(course=>{return course!==arr[0]})
+		props.setEnrolled(newArr);
+	}
+
+  const Header = (({
+    children, appointmentData, classes, ...restProps
+  }) => (
+      <AppointmentTooltip.Header
+        {...restProps}
+        appointmentData={appointmentData}
+      >
+        <Button color='secondary' onClick={() => handleDrop(appointmentData.title)}>Drop</Button>
+      </AppointmentTooltip.Header>
+    ));
+
   return (
-    <Card style={{height: "100%", paddingTop: '5px'}}>
+    <Card style={{ height: "100%", paddingTop: '5px' }}>
       <Scheduler
         data={data}
         height='auto'
@@ -71,9 +91,13 @@ const WeekCalendar = props => {
         <WeekView
           startDayHour={8}
           endDayHour={22}
-          excludedDays={[0,6]}
+          excludedDays={[0, 6]}
         />
         <Appointments />
+        <AppointmentTooltip
+          
+          headerComponent={Header}
+        />
       </Scheduler>
     </Card>
   );

@@ -28,7 +28,7 @@
                     "satisfaction": 90,
                     "avgtime": {
                         "0-5": 12,
-                        "5-10": 23,
+                        "5-10": 1,
                         "10-15": 10
                     },
                     "comment": {
@@ -154,8 +154,8 @@
         "prerequisite": true,
         "inDegree": true,
         "weekday": "tuth",
-        "startTime": "2:00",
-        "endTime": "2:50",
+        "startTime": "14:00",
+        "endTime": "14:50",
         "description": "This course introduces students to the key features of programming languages. Students implement a series of interpreters that nail down the precise details of how various aspects of programming languages behave.  Students are assumed to understand trees and (mathematical) functions that process them; the course builds up to the features of real programming languages from there.",
         "location": "Technological Institute M345",
         "info": {
@@ -194,13 +194,13 @@
         "prerequisite": true,
         "inDegree": true,
         "weekday": "mowefr",
-        "startTime": "5:00",
-        "endTime": "6:20",
+        "startTime": "17:00",
+        "endTime": "18:20",
         "description": "The compiler is the programmer's primary tool. Understanding the compiler is therefore critical for programmers, even if they never build one. Furthermore, many design techniques that emerged in the context of compilers are useful for a range of other application areas. This course introduces students to the essential elements of building a compiler: parsing, context-sensitive property checking, code linearization, register allocation, etc. To take this course, students are expected to already understand how programming languages behave, to a fairly detailed degree. The material in the course builds on that knowledge via a series of semantics preserving transformations that start with a fairly high-level programming language and culminate in machine code.",
         "location": "Annenberg Hall G21",
         "info": {
             "2019": {
-                "winter": {
+                "fall": {
                     "satisfaction": 68,
                     "avgtime": {
                         "0-5": 5,
@@ -222,8 +222,8 @@
         "prerequisite": false,
         "inDegree": false,
         "weekday": "tuth",
-        "startTime": "1:00",
-        "endTime": "2:20",
+        "startTime": "13:00",
+        "endTime": "14:20",
         "description": "Introduction to the foundations of statistics and statistical computing for data analysis and their applications. Covers descriptive statistics and statistical inference for estimation, testing and prediction.",
         "location": "Technological Institute L251",
         "info": {

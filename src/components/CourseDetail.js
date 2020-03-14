@@ -7,6 +7,8 @@ import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import AssignmentIndOutlinedIcon from '@material-ui/icons/AssignmentIndOutlined';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import CheckIcon from '@material-ui/icons/Check'
+import AverageTimePieChart from './AverageTimePieChart';
+
 
 const useStyles = makeStyles({
 	root: {
@@ -114,6 +116,7 @@ const CourseDetail = props => {
 							</Select>
 						</Grid>
 					</Grid>
+					<AverageTimePieChart course={props.course} year={year} quarter={quarter}/>
 				</CardContent>
 				<CardActions>
 					<Grid container justify="flex-end" style={{ width: "100%" }}>

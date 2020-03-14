@@ -143,6 +143,7 @@ const FilterMenu = props => {
 						</FormControl>
 					</ListItem>
 				</List>
+				<Button color='primary' onClick={handleClose}>Apply</Button>
 			</Menu>
 		</div>
 	);

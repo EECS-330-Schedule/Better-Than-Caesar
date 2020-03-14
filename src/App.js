@@ -78,7 +78,7 @@ const App = () => {
               }
               </Grid>
             <Grid className={classes.calendar} item container md={7}>
-              <WeekCalendar enrolled={enrolled} courseList={courseList} />
+              <WeekCalendar enrolled={enrolled} setEnrolled={setEnrolled} courseList={courseList} />
             </Grid>
           </Grid>
       }
